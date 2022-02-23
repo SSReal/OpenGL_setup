@@ -1,0 +1,54 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:\\mingw-w64\\mingw32\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++17",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\mingw-w64\\mingw32\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file with OpenGL Binaries",
+			"command": "C:\\mingw-w64\\mingw32\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"-std=c++17",
+				"-I${workspaceFolder}/include",
+				"-L${workspaceFolder}/lib",
+				"${file}",
+				"${workspaceFolder}/src/glad.c",
+				"-lglfw3dll",
+				"-o",
+				"${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\mingw-w64\\mingw32\\bin\\g++.exe"
+		}
+	]
+}
